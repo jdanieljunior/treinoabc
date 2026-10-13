@@ -304,7 +304,10 @@ const FIG={
     front:(P)=>`<circle class="eqf" cx="${P.f[0]+3}" cy="${P.f[1]-7}" r="6"/>`},
   sideplank:{ back:"",
     a:{h:[138,78],n:[126,88],p:[84,114],e:[126,122],w:[146,122],k:[62,120],f:[36,G-2],e2:[120,70],w2:[112,54],k2:[62,120],f2:[36,G-2]},
-    b:{h:[138,76],n:[126,86],p:[84,102],e:[126,122],w:[146,122],k:[62,114],f:[36,G-2],e2:[120,68],w2:[114,50],k2:[62,114],f2:[36,G-2]}}
+    b:{h:[138,76],n:[126,86],p:[84,102],e:[126,122],w:[146,122],k:[62,114],f:[36,G-2],e2:[120,68],w2:[114,50],k2:[62,114],f2:[36,G-2]}},
+  wallpush:{ back:`<line class="eq" x1="152" y1="4" x2="152" y2="${G}" style="stroke-width:6"/>`,
+    a:{h:[111,43],n:[104,52],p:[82,85],e:[125,53],w:[146,54],k:[69,105],f:[56,G-2]},
+    b:{h:[125,51],n:[122,68],p:[92,94],e:[142,74],w:[146,54],k:[75,110],f:[56,G-2]}}
 };
 const lerp=(a,b,t)=>[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t];
 function poseAt(f,t){
@@ -361,7 +364,7 @@ const PLAN={
     cardio:"7 min de esteira caminhando com inclinação de 5 a 8%",
     cool:"3 min de alongamento de pernas, costas e ombros"},
   C:{name:"Treino C",focus:"Corpo inteiro e equilíbrio",
-    warm:["3 min de esteira caminhando","Mobilidade: 10 pontes de glúteo e 10 flexões na parede"],
+    warm:["3 min de esteira caminhando",{t:"10 pontes de glúteo",fig:"bridge"},{t:"10 flexões na parede",fig:"wallpush"}],
     ex:[
       {id:"c1",n:"Subida no step",eq:"Step + halteres leves",fig:"stepup",s:2,r:"10 cada perna",rest:60,unit:"kg",cue:"Use o step com as duas bases. Suba empurrando pelo calcanhar da perna da frente e desça devagar.",q:"subida no step com halteres como fazer"},
       {id:"c2",n:"Flexão inclinada no Smith",eq:"Smith",fig:"smithpush",s:3,r:"10",rest:60,unit:"kg",cue:"Trave a barra na altura do quadril e apoie as mãos nela. Corpo em linha reta. Quanto mais alta a barra, mais fácil.",q:"flexão inclinada na barra smith como fazer"},
